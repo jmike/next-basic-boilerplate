@@ -1,0 +1,51 @@
+{
+  "name": "next-basic-boilerplate",
+  "version": "1.0.0",
+  "description": "Next.js basic boilerplate code",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "next ./src -p 3002",
+    "build": "next build ./src",
+    "start": "next start ./src -p $PORT"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:jmike/next-basic-boilerplate.git"
+  },
+  "author": {
+    "name": "Dimitrios C. Michalakos"
+  },
+  "license": "WTFPL",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.12.3",
+    "husky": "^1.1.0",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "prettier-eslint": "^8.8.2"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "core-js": "^2.6.2",
+    "next": "^7.0.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
+  }
+}
